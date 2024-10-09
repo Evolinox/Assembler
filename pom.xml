@@ -199,6 +199,33 @@
                 </executions>
             </plugin>
 
+            <plugin>
+                <groupId>de.perdian.maven.plugins</groupId>
+                <artifactId>macosappbundler-maven-plugin</artifactId>
+                <version>1.20.1</version>
+                <configuration>
+                    <plist>
+                        <CFBundleIconFile>src/main/resources/asm128.png</CFBundleIconFile>
+                        <CFBundleDevelopmentRegion>English</CFBundleDevelopmentRegion>
+                        <CFBundleName>Assembler</CFBundleName>
+                        <CFBundleDisplayName>Assembler</CFBundleDisplayName>
+                        <CFBundleShortVersionString>2024.10</CFBundleShortVersionString>
+                        <CFBundlePackageType>APPL</CFBundlePackageType>
+                        <NSHumanReadableCopyright>App Bundle by Evolinox :)</NSHumanReadableCopyright>
+                        <NSHighResolutionCapable>True</NSHighResolutionCapable>
+                        <JVMMainClassName>de.neemann.assembler.gui.Main</JVMMainClassName>
+                    </plist>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>bundle</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
@@ -238,6 +265,12 @@
             <artifactId>jdom2</artifactId>
             <version>2.0.6</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>de.perdian.maven.plugins</groupId>
+            <artifactId>macosappbundler-maven-plugin</artifactId>
+            <version>1.20.1</version>
         </dependency>
     </dependencies>
 
