@@ -69,6 +69,13 @@ public class Main extends JFrame implements ClosingWindowListener.ConfirmSave, A
 
         JMenu assemble = createASMMenu(toolBar);
 
+        if (true) {
+            // Set macOS Menubar
+            System.setProperty("com.apple.mrj.application.apple.menu.about.name", "Assembler");
+            System.setProperty("apple.awt.application.name", "Assembler");
+            System.setProperty("apple.laf.useScreenMenuBar", "true");
+        }
+
         ToolTipAction helpOpcodes = new ToolTipAction("Show help") {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {

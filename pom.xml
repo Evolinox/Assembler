@@ -205,7 +205,7 @@
                 <version>1.20.1</version>
                 <configuration>
                     <plist>
-                        <CFBundleIconFile>src/main/resources/asm128.png</CFBundleIconFile>
+                        <CFBundleIconFile>src/main/resources/icon.png</CFBundleIconFile>
                         <CFBundleDevelopmentRegion>English</CFBundleDevelopmentRegion>
                         <CFBundleName>Assembler</CFBundleName>
                         <CFBundleDisplayName>Assembler</CFBundleDisplayName>
@@ -214,7 +214,13 @@
                         <NSHumanReadableCopyright>App Bundle by Evolinox :)</NSHumanReadableCopyright>
                         <NSHighResolutionCapable>True</NSHighResolutionCapable>
                         <JVMMainClassName>de.neemann.assembler.gui.Main</JVMMainClassName>
+                        <CFBundleTypeExtensions>
+                            <string>dig</string>
+                        </CFBundleTypeExtensions>
                     </plist>
+                    <codesign>
+                        <identity>-</identity>
+                    </codesign>
                 </configuration>
                 <executions>
                     <execution>
